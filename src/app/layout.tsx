@@ -15,9 +15,9 @@ export async function generateMetadata({ }) {
 }
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
-  return (
-    <html lang="zh-CN">
-      <body>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="zh-CN">
+            <body>{children}</body>
+        </html>
+    );
 }

@@ -1,4 +1,6 @@
-body {
+body{margin: 0;}
+
+.bg {
     background-image: url('/index/background.png');
     background-size: cover;
     background-position: center;
@@ -12,7 +14,7 @@ body {
 	margin: 0;
 }
 
-body::before {
+.bg::before {
     content: '';
     position: absolute;
     top: 0;
