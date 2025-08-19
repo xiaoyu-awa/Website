@@ -15,7 +15,7 @@ export default function Home() {
                     </div>
                     <div className={styles.card_siderbar_avatar}>
                         <Image
-                            src="/index/avatar.jpg"
+                            src="/avatar.jpg"
                             alt="avatar"
                             width={196}
                             height={196}
