@@ -1,10 +1,10 @@
 export async function generateMetadata({ }) {
   return {
-    title: "主页 - 筱雨の博客",
-    description: "笨蛋筱雨的博客主页",
+    title: "筱雨の主页",
+    description: "笨蛋筱雨的主页",
     openGraph: {
-      title: "主页 - 筱雨の博客",
-      description: "笨蛋筱雨的博客主页",
+      title: "筱雨の主页",
+      description: "笨蛋筱雨的主页",
       images: [
         {
           url: "/index/avatar.jpg",
