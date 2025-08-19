@@ -1,3 +1,5 @@
+import './global.css'
+
 export async function generateMetadata({ }) {
   return {
     title: "筱雨の主页",
@@ -7,7 +9,7 @@ export async function generateMetadata({ }) {
       description: "笨蛋筱雨的主页",
       images: [
         {
-          url: "/index/avatar.jpg",
+          url: "/avatar.jpg",
         },
       ],
     },
