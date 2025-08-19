@@ -135,6 +135,7 @@ body{margin: 0;}
     text-align: center;
 }
 .card_siderbar_footer > a > img{
+    display: inline;
     width: 16%;
     height: auto;
 }
