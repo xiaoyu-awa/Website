@@ -41,13 +41,13 @@ export async function generateMetadata({ }) {
 
 export default async function Blog({params,}: {  params: Promise<{ blog: string }>}) {
     const { blog } = await params
-    var { content,frontmatter } = getBlogData(blog + ".md")
+    var { content,frontmatter } = getBlogData(blog)
     //全局变量
     global.content = content;
     global.frontmatter = frontmatter;
 
     // markdown-it渲染
-    const mathjaxInstance = createMathjaxInstance({output: "chtml"});
+    const mathjaxInstance = await createMathjaxInstance({output: "svg"});
     var md = new Markdown({
         html: true,
         linkify: true,
@@ -94,7 +94,10 @@ export default async function Blog({params,}: {  params: Promise<{ blog: string 
                         </span>
                     </div>
                     <hr className='m-4'/>
-                    <div className="prose max-w-none leading-normal prose-hr:m-4" dangerouslySetInnerHTML={{ __html: text }}></div>
+                    <div className="[&_svg]:inline prose max-w-none leading-normal prose-hr:m-4" dangerouslySetInnerHTML={{ __html: text }}></div>
+                    <style>
+                        {mathjaxInstance?.outputStyle()}
+                    </style>
                 </div>
             }
         />

@@ -14,16 +14,18 @@ export function getBlogData(blogName: string) {
 
 export function getBlogs() {
     const filePath = path.join(process.cwd(), 'blogs');
-    const blogs: { content: string; frontmatter: { [key: string]: any; }; }[] = [];
+    const blogs: {filepath: string; content: string; frontmatter: { [key: string]: any; }; }[] = [];
     try {
         const files = fs.readdirSync(filePath);
         files.forEach(function (filename) {
             const filedir = path.join(filePath, filename);
             const stats = fs.statSync(filedir);
             if (stats.isFile()) {
-                blogs.push(getBlogData(filename));
+                var blogData = getBlogData(filename);
+                blogs.push({filepath: filename, content: blogData.content, frontmatter: blogData.frontmatter});
             }
         });
+        console.log(blogs)
         return blogs;
     } catch (err) {
         console.error("读取博客文件夹或文件错误:", err);

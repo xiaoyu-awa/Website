@@ -14,9 +14,9 @@ export default function Home() {
             mainContent={
                 <div className='grid gap-4'>
                     {getBlogs().map((blog, index) => (
-                        <ArticleCard 
+                        <ArticleCard
+                            data={blog}
                             key={index}
-                            data={blog.frontmatter}
                         />
                     ))}
                 </div>
