@@ -71,9 +71,13 @@ export default async function Blog({params,}: {  params: Promise<{ blog: string 
             leftContent={
                 <div>
                     <div>
-                        <div>简介：<span className='text-s'>{frontmatter.excerpt}</span></div>
+                        <div>简介：<br/>
+                            <span className='text-sm'>{frontmatter.excerpt}</span>
+                        </div>
                         <hr className='m-2' />
-                        <div>文章标签：<span className='text-s'>{frontmatter.tags}</span></div>
+                        <div>文章标签：<br/>
+                            <span className='text-sm'>{frontmatter.tags}</span>
+                        </div>
                     </div>
                 </div>
             }

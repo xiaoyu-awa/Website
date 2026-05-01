@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from 'next/image';
 
 export default function ArticleCard(data: any) {
-    console.log(data)
     data = data.data
     return (
         <article className="flex w-full backdrop-brightness-110 text-c rounded-lg overflow-auto hover:shadow">

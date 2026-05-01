@@ -25,10 +25,8 @@ export function getBlogs() {
                 blogs.push({filepath: filename, content: blogData.content, frontmatter: blogData.frontmatter});
             }
         });
-        console.log(blogs)
-        return blogs;
+        return blogs.toReversed();
     } catch (err) {
-        console.error("读取博客文件夹或文件错误:", err);
         throw err;
     }
 }
